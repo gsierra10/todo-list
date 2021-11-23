@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react"
-import {store} from "../../services/redux/store"
+import store from "../../services/redux/store"
+
 
 const ToDoList = () => {
-    const [tasks, setTasks] = useState
+    const [tasks, setTasks] = useState([{'title': 'Aprobar algun proyecto del bootcamp'}])
+    
 
     useEffect(() => {
         store.subscribe(()=>{
             setTasks(store.getState().tasks)
+            console.log('State Changed')
         })
     }, [])
     return (
         <div>
-            <input type='text' onSubmit=''>Agregue su tarea</input>
-            <button>Añadir</button>
+           {tasks.map((tasks) => <><h1>{tasks.title}</h1></>)}
         </div>
     )
 }
