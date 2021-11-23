@@ -1,12 +1,13 @@
 import './App.css'; 
-import ToDoForm from './components/ToDoForm/ToDoForm';
-import ToDoList from './components/ToDoList/ToDoList';
+import Header from './components/Header/Header';
+import ToDoPage from './containers/ToDoPage/ToDoPage';
+
 
 function App() {
   return (
     <div className="App">
-      <ToDoForm />
-      <ToDoList />
+      <Header />
+      <ToDoPage />
     </div>
   );
 }
