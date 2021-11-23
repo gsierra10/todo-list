@@ -1,12 +1,12 @@
 import { createStore } from "redux";
 
 const initialState = {
-    tasks: [{'title': 'hacer la tarea'}]
+    tasks: []
 }
 
 const reducer = (state = initialState, action) => {
     console.log('REDUCER', action);
-    if (action.type == 'ADD-TASKS') {
+    if (action.type == 'ADD_TASKS') {
         return {
             ...state,
             tasks: state.tasks.concat(action.payload)

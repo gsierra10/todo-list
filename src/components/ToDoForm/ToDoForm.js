@@ -13,15 +13,14 @@ const ToDoForm = () => {
     }    
 
     return (
-        <>
-            {tasks.map((tasks) =>   
-                <form  onSubmit={()=>AddTask(tasks)}>
-                    <input type='texto' placeholder='Agregue su tarea'>{tasks.title}</input>
-                    <button type='onSubmit' >Añadir</button>
-                </form>               
-            )}
+        <>  
+            <form  onSubmit={()=>AddTask(tasks)}>
+                <input type='texto' placeholder='Agregue su tarea'>{tasks.title}</input>
+                <button type='onSubmit' >Añadir</button>
+            </form>               
         </>    
     )
 }
+
 
 export default ToDoForm

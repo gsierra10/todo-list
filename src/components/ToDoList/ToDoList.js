@@ -3,7 +3,7 @@ import store from "../../services/redux/store"
 
 
 const ToDoList = () => {
-    const [tasks, setTasks] = useState([{'title': 'Aprobar algun proyecto del bootcamp'}])
+    const [tasks, setTasks] = useState([{'title': 'Aprobar un proyecto del bootcamp'}])
     
 
     useEffect(() => {
