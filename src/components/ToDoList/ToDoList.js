@@ -3,18 +3,21 @@ import store from "../../services/redux/store"
 
 
 const ToDoList = () => {
-    const [tasks, setTasks] = useState([{'title': 'Aprobar un proyecto del bootcamp'}])
+    const [tasks, setTasks] = useState([])
     
-
     useEffect(() => {
+        setTasks(store.getState().tasks)
         store.subscribe(()=>{
             setTasks(store.getState().tasks)
-            console.log('State Changed')
         })
     }, [])
     return (
         <div>
-           {tasks.map((tasks) => <><h1>{tasks.title}</h1></>)}
+           {tasks.map((tasks) => 
+                <ul>
+                    <li type='disc'>{tasks}</li>
+                </ul>
+            )}
         </div>
     )
 }
